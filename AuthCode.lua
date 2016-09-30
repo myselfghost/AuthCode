@@ -1,4 +1,5 @@
-local  AuthCode =  function (str, operation,key, expiry)
+local _M = {}
+function _M.AuthCode(str, operation,key, expiry)
     local bit = require "bit"
     local operation = operation or "DECODE"
     local key = key or ngx.null
@@ -105,13 +106,5 @@ local  AuthCode =  function (str, operation,key, expiry)
     end
 	
 end
-local stra = "d7a7OIcNm46XO50lSbLjad9JG547zyOIG+DZ9ZvKdPeJgqEd"
---local stra = "1702IgnpP6A6XoE5gimIx9InkcjvZ+UMA/9qEYM9AwiBdQGu"
---local stra = "yangtao"
-local ke = "abcdefg"
-
-local rea = AuthCode(stra, 'DECODE',ke,  0)
-
-ngx.say(rea)
-
+return  _M.AuthCode
 
