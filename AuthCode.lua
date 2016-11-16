@@ -20,7 +20,7 @@ function _M.AuthCode(str, operation,key, expiry)
     local sprintf = string.format
 	local tonumber = tonumber
 
--- lua 的sub 起始点是1， php substr 是0；数组也是如此
+
 
     key = md5(key)
     operation=strtoupper(operation)
